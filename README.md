@@ -2,6 +2,8 @@
 
 Six self-contained HTML theme shells you can paste content into. No build step, no framework dependency at view time, no JavaScript. Open any file in a browser and it just renders.
 
+![All six themes rendering the same sample content](theme-grid.png)
+
 Built for use with [`lavish-axi`](https://github.com/kunchenguid/lavish-axi) and the [`lavish-publish-cf`](https://github.com/natekettles/lavish-publish-cf) worker, but the themes themselves are framework-agnostic — a Claude Code agent, a static-site generator, or a human with a text editor can all use them the same way.
 
 ## The themes
