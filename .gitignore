@@ -3,3 +3,6 @@
 *.swo
 __pycache__/
 *.pyc
+
+# Local-only scaffolds for one-off screenshots
+_grid.html
