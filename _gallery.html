@@ -70,6 +70,7 @@ footer.gallery-foot code { background: var(--panel); border: 1px solid var(--bor
     <a href="#terminal">terminal</a>
     <a href="#water">water</a>
     <a href="#swiss">swiss</a>
+    <a href="#lavish-light">lavish-light</a>
     <a href="#handwritten">handwritten</a>
     <a href="#zine">zine</a>
   </nav>
@@ -873,6 +874,14 @@ h4,
 h5,
 h6 {
   margin-bottom: 0.8rem;
+}
+
+@media (max-width: 720px) {
+  h1 { font-size: 1.85rem; line-height: 2.3rem; }
+  h2 { font-size: 1.35rem; line-height: 1.7rem; }
+  h3 { font-size: 1.15rem; }
+  table { display: block; overflow-x: auto; max-width: 100%; }
+  pre { overflow-x: auto; max-width: 100%; }
 }
 
 &lt;/style&gt;
@@ -2807,7 +2816,6 @@ body &gt; footer {
   }
   header.masthead .meta strong { color: var(--red); display: block; font-weight: 700; }
   main { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: 56px; align-items: start; }
-  @media (max-width: 720px) { main { grid-template-columns: 1fr; gap: 32px; } }
   article &gt; * + * { margin-top: 1.1em; }
   aside { font-size: 0.92rem; color: var(--muted); border-top: 2px solid var(--rule); padding-top: 14px; }
   aside h3 { font-family: &quot;Inter Tight&quot;, sans-serif; font-weight: 900; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); margin: 0 0 8px; }
@@ -2846,6 +2854,36 @@ body &gt; footer {
     margin-top: 64px; padding-top: 18px; border-top: 6px solid var(--rule);
     display: grid; grid-template-columns: 1fr auto; gap: 16px; font-size: 0.78rem;
     text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted);
+  }
+
+  /* ── Mobile responsive ── */
+  @media (max-width: 720px) {
+    body { padding: 28px 5vw 56px; overflow-x: hidden; }
+
+    header.masthead {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    header.masthead .meta {
+      text-align: left;
+    }
+
+    main { grid-template-columns: 1fr; gap: 32px; }
+
+    p { max-width: 100%; }
+    p.lede { font-size: 1.1rem; max-width: 100%; }
+
+    blockquote { font-size: 1.1rem; max-width: 100%; }
+
+    table { font-size: 0.85rem; display: block; overflow-x: auto; width: 100%; }
+    th, td { padding: 8px 10px 8px 0; }
+
+    pre { overflow-x: auto; max-width: 100%; }
+
+    footer.colophon {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
   }
 &lt;/style&gt;
 &lt;/head&gt;
@@ -2908,6 +2946,187 @@ body &gt; footer {
 &lt;/html&gt;
 " loading="lazy" title="swiss sample"></iframe>
   </section>
+  <section class="sample" id="lavish-light">
+    <header class="label">
+      <div>
+        <div class="name">lavish-light</div>
+        <div class="blurb">Softened Swiss. Dark gray on near-white, hairline rules, light code blocks. The default — decisive but easy on the eyes.</div>
+      </div>
+      <div class="actions">
+        <a href="tier2/lavish-light.html" target="_blank" rel="noopener">open standalone ↗</a>
+      </div>
+    </header>
+    <iframe srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;meta name=&quot;lavish-design&quot; content=&quot;off&quot;&gt;
+&lt;title&gt;Lavish Light — sample&lt;/title&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Inter+Tight:wght@500;700;900&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;style&gt;
+  :root {
+    --paper: #fcfcfa;
+    --ink:   #2b2b2b;
+    --red:   #e30613;
+    --rule:  #d6d6d0;   /* hairline rules */
+    --line:  #2b2b2b;   /* the few structural rules we keep */
+    --muted: #6b6b66;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink);
+    font-family: &quot;Inter&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+    font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+    font-feature-settings: &quot;ss01&quot;, &quot;cv11&quot;; }
+  body { padding: 56px 6vw 96px; max-width: 1120px; margin: 0 auto; }
+  header.masthead {
+    display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end;
+    border-bottom: 2px solid var(--line); padding-bottom: 18px; margin-bottom: 36px;
+  }
+  header.masthead h1 {
+    font-family: &quot;Inter Tight&quot;, &quot;Inter&quot;, sans-serif;
+    font-weight: 900; font-size: clamp(2.2rem, 6vw, 4.5rem);
+    line-height: 0.95; letter-spacing: -0.025em; margin: 0;
+    text-wrap: balance;
+  }
+  header.masthead .meta {
+    font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.16em;
+    color: var(--muted); text-align: right;
+  }
+  header.masthead .meta strong { color: var(--red); display: block; font-weight: 700; }
+  main { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: 56px; align-items: start; }
+  article &gt; * + * { margin-top: 1.1em; }
+  aside { font-size: 0.92rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 14px; }
+  aside h3 { font-family: &quot;Inter Tight&quot;, sans-serif; font-weight: 900; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); margin: 0 0 8px; }
+  h2 {
+    font-family: &quot;Inter Tight&quot;, sans-serif;
+    font-weight: 900; font-size: 1.45rem; line-height: 1.1; letter-spacing: -0.01em;
+    margin: 2.4em 0 0.6em; padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+    text-transform: uppercase;
+  }
+  h2::before { content: &quot;&quot;; display: inline-block; width: 14px; height: 14px; background: var(--red); margin-right: 12px; vertical-align: 1px; }
+  p { margin: 0; max-width: 64ch; }
+  p.lede { font-size: 1.25rem; line-height: 1.4; font-weight: 500; max-width: 56ch; }
+  p.lede::first-letter { color: var(--red); font-weight: 900; }
+  strong { font-weight: 700; }
+  em { font-style: italic; color: var(--ink); }
+  code { font-family: &quot;JetBrains Mono&quot;, ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.92em; padding: 1px 6px; background: #f0efe9; border: 1px solid #e3e2dc; }
+  pre code { background: transparent; border: 0; padding: 0; color: inherit; font-size: inherit; }
+  blockquote {
+    margin: 0; padding: 14px 0 14px 22px;
+    border-left: 4px solid var(--red);
+    font-family: &quot;Inter Tight&quot;, sans-serif; font-weight: 500;
+    font-size: 1.35rem; line-height: 1.3; max-width: 50ch;
+  }
+  table {
+    width: 100%; border-collapse: collapse; font-size: 0.95rem;
+    border-top: 2px solid var(--line); border-bottom: 2px solid var(--line);
+  }
+  th, td { padding: 10px 14px 10px 0; text-align: left; vertical-align: top; border-bottom: 1px solid #d8d7d2; }
+  th { font-family: &quot;Inter Tight&quot;, sans-serif; font-weight: 900; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; }
+  pre { background: #f2f1ec; color: var(--ink); border: 1px solid #e3e2dc; padding: 16px 18px; font-family: &quot;JetBrains Mono&quot;, ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9rem; line-height: 1.45; overflow-x: auto; }
+  ul { padding-left: 0; list-style: none; }
+  ul li { padding-left: 24px; position: relative; }
+  ul li + li { margin-top: 8px; }
+  ul li::before { content: &quot;—&quot;; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+  footer.colophon {
+    margin-top: 64px; padding-top: 18px; border-top: 2px solid var(--line);
+    display: grid; grid-template-columns: 1fr auto; gap: 16px; font-size: 0.78rem;
+    text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted);
+  }
+
+  /* ── Mobile responsive ── */
+  @media (max-width: 720px) {
+    body { padding: 28px 5vw 56px; overflow-x: hidden; }
+
+    header.masthead {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    header.masthead .meta {
+      text-align: left;
+    }
+
+    main { grid-template-columns: 1fr; gap: 32px; }
+
+    p { max-width: 100%; }
+    p.lede { font-size: 1.1rem; max-width: 100%; }
+
+    blockquote { font-size: 1.1rem; max-width: 100%; }
+
+    table { font-size: 0.85rem; display: block; overflow-x: auto; width: 100%; }
+    th, td { padding: 8px 10px 8px 0; }
+
+    pre { overflow-x: auto; max-width: 100%; }
+
+    footer.colophon {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header class=&quot;masthead&quot;&gt;
+  &lt;h1&gt;The Quiet Architecture of Distinct Themes&lt;/h1&gt;
+  &lt;div class=&quot;meta&quot;&gt;
+    &lt;strong&gt;Sample 06 / 07&lt;/strong&gt;
+    Lavish theme library
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;p class=&quot;lede&quot;&gt;This page renders the same content under every theme in the Lavish library. Use it to pick the look that fits the work, then publish or open accordingly. Each theme is self-contained &amp;mdash; one stylesheet, no JavaScript, no build step.&lt;/p&gt;
+
+    &lt;h2&gt;Three points of attention&lt;/h2&gt;
+    &lt;p&gt;Look at how the body type feels at long-form length. Whether the heading hierarchy reads at a glance. How &lt;code&gt;inline code&lt;/code&gt;, tables, and quotes sit inside prose.&lt;/p&gt;
+
+    &lt;h2&gt;On intent&lt;/h2&gt;
+    &lt;blockquote&gt;Design is the rendering of intent. Or, less grandly: the choices you make until the page stops fighting you.&lt;/blockquote&gt;
+
+    &lt;h2&gt;The library&lt;/h2&gt;
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Theme&lt;/th&gt;&lt;th&gt;Aesthetic&lt;/th&gt;&lt;th&gt;Best for&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;Tufte&lt;/td&gt;&lt;td&gt;Editorial with margin notes&lt;/td&gt;&lt;td&gt;Long essays&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Terminal&lt;/td&gt;&lt;td&gt;Monospace stationery&lt;/td&gt;&lt;td&gt;Postmortems, runbooks&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Water&lt;/td&gt;&lt;td&gt;Neutral, auto dark/light&lt;/td&gt;&lt;td&gt;General briefs&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Swiss&lt;/td&gt;&lt;td&gt;International typographic&lt;/td&gt;&lt;td&gt;Decisive briefs&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;h2&gt;A sample&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;function pick(theme) {
+  return themes[theme] ?? themes.default;
+}&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;h2&gt;Notes&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Tier 1 imports drop in via CDN link.&lt;/li&gt;
+      &lt;li&gt;Tier 2 hand-builds inline their styles.&lt;/li&gt;
+      &lt;li&gt;The gallery iframes each so styles never collide.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/article&gt;
+
+  &lt;aside&gt;
+    &lt;h3&gt;About this template&lt;/h3&gt;
+    &lt;p&gt;Softened Swiss. The same typographic grid, but dark&amp;#8209;gray ink on near&amp;#8209;white, hairline rules, and a light code block instead of solid black. The single red accent stays.&lt;/p&gt;
+    &lt;h3 style=&quot;margin-top: 20px;&quot;&gt;In one line&lt;/h3&gt;
+    &lt;p&gt;Decisive and plain &amp;mdash; easy on the eyes.&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer class=&quot;colophon&quot;&gt;
+  &lt;div&gt;Lavish design library &amp;nbsp;·&amp;nbsp; tier&amp;nbsp;2&lt;/div&gt;
+  &lt;div&gt;Lavish Light&lt;/div&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" loading="lazy" title="lavish-light sample"></iframe>
+  </section>
   <section class="sample" id="handwritten">
     <header class="label">
       <div>
@@ -2953,6 +3172,14 @@ body &gt; footer {
     body { padding-left: 96px; font-size: 21px; line-height: 32px;
       background-image:
         linear-gradient(90deg, transparent 72px, var(--margin) 72px, var(--margin) 73px, transparent 73px),
+        repeating-linear-gradient(to bottom, transparent 0, transparent 31px, var(--ruling) 31px, var(--ruling) 32px);
+    }
+    h1 { font-size: 36px; line-height: 48px; }
+  }
+  @media (max-width: 400px) {
+    body { padding-left: 72px;
+      background-image:
+        linear-gradient(90deg, transparent 56px, var(--margin) 56px, var(--margin) 57px, transparent 57px),
         repeating-linear-gradient(to bottom, transparent 0, transparent 31px, var(--ruling) 31px, var(--ruling) 32px);
     }
   }
@@ -3001,6 +3228,17 @@ body &gt; footer {
   ul li::before { content: &quot;✓&quot;; position: absolute; left: 0; color: var(--margin); font-weight: 700; }
   .signature { margin-top: 48px; font-family: &quot;Caveat&quot;, cursive; font-size: 26px; color: var(--pencil); font-style: italic; }
   .signature::before { content: &quot;— &quot;; }
+
+  @media (max-width: 540px) {
+    h1 { font-size: 36px; line-height: 48px; }
+    h2 { font-size: 28px; line-height: 32px; }
+    blockquote { max-width: 100%; margin-left: 0; font-size: 20px; line-height: 28px; }
+    table { display: block; overflow-x: auto; max-width: 100%; }
+    pre { overflow-x: auto; max-width: 100%; }
+  }
+  @media (max-width: 400px) {
+    h1 { font-size: 30px; line-height: 40px; }
+  }
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -3117,7 +3355,7 @@ body &gt; footer {
   em { background: var(--magenta); color: var(--black); padding: 0 3px; font-style: normal; }
   code { background: var(--black); color: var(--cyan); padding: 1px 6px; font-family: &quot;Space Mono&quot;, monospace; font-size: 0.92em; }
   blockquote {
-    margin: 0; padding: 24px 28px;
+    margin: 0 0 48px; padding: 24px 28px;
     background: var(--magenta); color: var(--black);
     font-family: &quot;Archivo Black&quot;, sans-serif; font-size: 1.4rem; line-height: 1.2;
     border: 4px solid var(--black);
@@ -3148,6 +3386,18 @@ body &gt; footer {
     text-align: center; font-family: &quot;Archivo Black&quot;, sans-serif;
     text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.78rem;
     clip-path: polygon(0 24px, 50% 0, 100% 24px, 100% 100%, 0 100%);
+  }
+  @media (max-width: 480px) {
+    header.cover {
+      padding: 32px 6vw 48px;
+    }
+    header.cover h1 {
+      line-height: 1.0;
+    }
+    blockquote {
+      box-shadow: 5px 5px 0 var(--black);
+      margin-right: 5px;
+    }
   }
 &lt;/style&gt;
 &lt;/head&gt;

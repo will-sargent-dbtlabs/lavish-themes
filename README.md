@@ -1,8 +1,8 @@
 # Lavish Themes
 
-Six self-contained HTML theme shells you can paste content into. No build step, no framework dependency at view time, no JavaScript. Open any file in a browser and it just renders.
+Seven self-contained HTML theme shells you can paste content into. No build step, no framework dependency at view time, no JavaScript. Open any file in a browser and it just renders.
 
-![All six themes rendering the same sample content](theme-grid.png)
+![All seven themes rendering the same sample content](theme-grid.png)
 
 Built for use with [`lavish-axi`](https://github.com/kunchenguid/lavish-axi) and the [`lavish-publish-cf`](https://github.com/natekettles/lavish-publish-cf) worker, but the themes themselves are framework-agnostic — a Claude Code agent, a static-site generator, or a human with a text editor can all use them the same way.
 
@@ -25,6 +25,7 @@ Authored in this repo. Only external dependency is Google Fonts.
 | Slug | Aesthetic | Best for |
 | --- | --- | --- |
 | [`swiss`](tier2/swiss.html) | International typographic. Inter Tight, black/red/white grid, flush-left. | Decisive product/strategy briefs |
+| [`lavish-light`](tier2/lavish-light.html) | Softened Swiss. Dark gray on near-white, hairline rules, light code. | **The default** — decisive briefs, easy on the eyes |
 | [`handwritten`](tier2/handwritten.html) | Lined exercise book + Caveat + Permanent Marker. Warm paper. | Personal notes, casual writing |
 | [`zine`](tier2/zine.html) | Yellow / black / magenta. Anton display. Clip-path angles, hard shadows. | Loud manifestos, launches |
 
