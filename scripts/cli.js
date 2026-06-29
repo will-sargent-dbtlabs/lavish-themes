@@ -12,6 +12,7 @@ const THEMES = [
   { slug: "terminal",    tier: 1, blurb: "Monospace terminal stationery" },
   { slug: "water",       tier: 1, blurb: "Neutral classless, auto dark/light" },
   { slug: "swiss",       tier: 2, blurb: "International typographic, black/red/white grid" },
+  { slug: "lavish-light", tier: 2, blurb: "Softened Swiss \u2014 dark gray on near-white, hairline rules (default)" },
   { slug: "handwritten", tier: 2, blurb: "Lined exercise book, Caveat + Permanent Marker" },
   { slug: "zine",        tier: 2, blurb: "Yellow/black/magenta, Anton, hard shadows" },
 ];

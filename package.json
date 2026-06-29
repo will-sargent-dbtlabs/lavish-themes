@@ -1,7 +1,7 @@
 {
   "name": "@rubar/lavish-themes",
   "version": "0.1.0",
-  "description": "Six self-contained HTML theme shells — latex, terminal, water, swiss, handwritten, zine. No JS, no build step.",
+  "description": "Seven self-contained HTML theme shells — latex, terminal, water, swiss, lavish-light, handwritten, zine. No JS, no build step.",
   "bin": {
     "lavish-themes": "scripts/cli.js"
   },

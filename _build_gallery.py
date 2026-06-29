@@ -21,6 +21,7 @@ THEMES = [
     ("water",       "tier1", "water",       "Neutral, tasteful, auto dark/light. The 'makes any HTML look decent' pick.", "https://watercss.kognise.dev/"),
     # Tier 2 hand-built themes.
     ("swiss",       "tier2", "swiss",       "International typographic. Helvetica/Inter, black/red/white grid, flush-left.", ""),
+    ("lavish-light","tier2", "lavish-light","Softened Swiss. Dark gray on near-white, hairline rules, light code blocks. The default \u2014 decisive but easy on the eyes.", ""),
     ("handwritten", "tier2", "handwritten", "Lined exercise book + Caveat. Notebook feel.", ""),
     ("zine",        "tier2", "zine",        "High-contrast yellow/black/magenta. Clip-path angles. Distressed shouty.", ""),
 ]
