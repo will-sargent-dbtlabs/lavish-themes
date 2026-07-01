@@ -24,6 +24,8 @@ THEMES = [
     ("lavish-light","tier2", "lavish-light","Softened Swiss. Dark gray on near-white, hairline rules, light code blocks. The default \u2014 decisive but easy on the eyes.", ""),
     ("handwritten", "tier2", "handwritten", "Lined exercise book + Caveat. Notebook feel.", ""),
     ("zine",        "tier2", "zine",        "High-contrast yellow/black/magenta. Clip-path angles. Distressed shouty.", ""),
+    ("dbt-brief",   "tier2", "dbt-brief",   "Gradient SaaS dashboard. Orange/purple gradient masthead, card grid, pill badges, gradient table header. Account briefs, status dashboards.", ""),
+    ("dbt-brief-dashboard", "tier2", "dbt-brief-dashboard", "dbt-brief, split into CSS-only tabs (nested radio+label+:has(), no JS). Reference implementation for multi-section dashboards.", ""),
 ]
 
 GALLERY_CSS = dedent("""

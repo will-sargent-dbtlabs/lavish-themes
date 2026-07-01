@@ -1,6 +1,6 @@
 # Lavish Themes
 
-Seven self-contained HTML theme shells you can paste content into. No build step, no framework dependency at view time, no JavaScript. Open any file in a browser and it just renders.
+Nine self-contained HTML theme shells you can paste content into. No build step, no framework dependency at view time, no JavaScript. Open any file in a browser and it just renders.
 
 ![All seven themes rendering the same sample content](theme-grid.png)
 
@@ -28,6 +28,8 @@ Authored in this repo. Only external dependency is Google Fonts.
 | [`lavish-light`](tier2/lavish-light.html) | Softened Swiss. Dark gray on near-white, hairline rules, light code. | **The default** — decisive briefs, easy on the eyes |
 | [`handwritten`](tier2/handwritten.html) | Lined exercise book + Caveat + Permanent Marker. Warm paper. | Personal notes, casual writing |
 | [`zine`](tier2/zine.html) | Yellow / black / magenta. Anton display. Clip-path angles, hard shadows. | Loud manifestos, launches |
+| [`dbt-brief`](tier2/dbt-brief.html) | Gradient SaaS dashboard. Orange/purple gradient masthead, card grid, pill badges, gradient table header. Captured from a dbt Labs RA customer-briefing artifact. | Account briefs, status dashboards |
+| [`dbt-brief-dashboard`](tier2/dbt-brief-dashboard.html) | Same look as `dbt-brief`, restructured into CSS-only tabs (no JS) instead of one scroll. **Reference implementation** for the "dashboard" pattern — see the file's top-of-file comment before adapting; it documents two easy-to-miss mistakes (radio hit-area vs. label, and a `-->` CSS comment bug) found while building the first version of this. | Multi-section dashboards where the user switches tabs instead of scrolling |
 
 ## Preview them
 

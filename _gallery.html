@@ -73,6 +73,8 @@ footer.gallery-foot code { background: var(--panel); border: 1px solid var(--bor
     <a href="#lavish-light">lavish-light</a>
     <a href="#handwritten">handwritten</a>
     <a href="#zine">zine</a>
+    <a href="#dbt-brief">dbt-brief</a>
+    <a href="#dbt-brief-dashboard">dbt-brief-dashboard</a>
   </nav>
 </header>
 
@@ -3448,6 +3450,529 @@ body &gt; footer {
 &lt;/body&gt;
 &lt;/html&gt;
 " loading="lazy" title="zine sample"></iframe>
+  </section>
+  <section class="sample" id="dbt-brief">
+    <header class="label">
+      <div>
+        <div class="name">dbt-brief</div>
+        <div class="blurb">Gradient SaaS dashboard. Orange/purple gradient masthead, card grid, pill badges, gradient table header. Account briefs, status dashboards.</div>
+      </div>
+      <div class="actions">
+        <a href="tier2/dbt-brief.html" target="_blank" rel="noopener">open standalone ↗</a>
+      </div>
+    </header>
+    <iframe srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;meta name=&quot;lavish-design&quot; content=&quot;off&quot;&gt;
+&lt;title&gt;dbt Brief — sample&lt;/title&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;style&gt;
+  :root {
+    --orange: #fd6603;
+    --purple: #7b2de4;
+    --grad: linear-gradient(135deg, var(--orange) 0%, var(--purple) 100%);
+    --paper: #f8f9fa;
+    --ink:   #2c3e50;
+    --muted: #6b7280;
+    --rule:  #f0f0f0;
+    --shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink);
+    font-family: &quot;Inter&quot;, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  body { padding: 0 0 80px; max-width: 1180px; margin: 0 auto; }
+
+  header.masthead {
+    background: var(--grad); color: white; padding: 44px 6vw 36px;
+    display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start;
+    margin-bottom: 36px;
+  }
+  header.masthead h1 {
+    font-weight: 800; font-size: clamp(1.9rem, 4.2vw, 2.6rem);
+    line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 8px; text-wrap: balance;
+  }
+  header.masthead .subtitle { font-size: 1.15em; opacity: 0.95; font-weight: 400; margin: 0 0 10px; }
+  header.masthead .meta {
+    font-size: 0.85em; opacity: 0.85; display: flex; gap: 20px; flex-wrap: wrap;
+  }
+  header.masthead .badge-chip {
+    background: rgba(255,255,255,0.16); backdrop-filter: blur(8px);
+    padding: 10px 18px; border-radius: 10px; text-align: right; font-size: 0.85em;
+    min-width: 170px;
+  }
+  header.masthead .badge-chip .chip-label { opacity: 0.78; font-size: 0.85em; }
+  header.masthead .badge-chip .chip-value { font-weight: 700; font-size: 1.1em; }
+
+  main { padding: 0 6vw; display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: 48px; align-items: start; }
+  article &gt; * + * { margin-top: 1.2em; }
+  aside { font-size: 0.92rem; color: var(--muted); }
+  aside .aside-box {
+    background: white; border-radius: 12px; box-shadow: var(--shadow);
+    border: 1px solid var(--rule); border-left: 4px solid var(--orange);
+    padding: 18px 20px; margin-bottom: 16px;
+  }
+  aside h3 { font-weight: 700; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); margin: 0 0 8px; }
+
+  h2.section-title {
+    font-size: 1.7em; color: var(--ink); margin: 2.2em 0 12px 0; font-weight: 700;
+    padding-bottom: 10px; border-bottom: 3px solid var(--orange);
+    display: flex; align-items: center; gap: 10px;
+  }
+  h2.section-title:first-child { margin-top: 0; }
+  h3.subsection-title {
+    font-size: 1.15em; color: var(--ink); margin: 1.6em 0 14px 0;
+    padding-left: 13px; border-left: 4px solid var(--orange); font-weight: 700;
+  }
+  p { margin: 0; max-width: 70ch; }
+  p.lede { font-size: 1.18rem; line-height: 1.45; font-weight: 500; max-width: 60ch; color: var(--ink); }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; padding: 1px 6px; background: #f0f0f0; border: 1px solid #e5e5e5; border-radius: 4px; }
+  pre { background: #f5f5f5; color: var(--ink); border: 1px solid #e5e5e5; padding: 16px 18px; border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88rem; line-height: 1.5; overflow-x: auto; }
+  pre code { background: transparent; border: 0; padding: 0; }
+  blockquote {
+    margin: 0; padding: 16px 0 16px 22px; border-left: 4px solid var(--purple);
+    font-weight: 500; font-size: 1.2rem; line-height: 1.35; max-width: 52ch; color: var(--ink);
+  }
+
+  /* ── badges ── */
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 14px; font-size: 0.78em; font-weight: 600; vertical-align: middle; }
+  .badge.green  { background: #dcfce7; color: #15803d; }
+  .badge.yellow { background: #fef3c7; color: #b45309; }
+  .badge.red    { background: #fee2e2; color: #b91c1c; }
+  .badge.blue   { background: #dbeafe; color: #1d4ed8; }
+  .badge.purple { background: #f3e8ff; color: #7c3aed; }
+  .badge.gray   { background: #f1f5f9; color: #475569; }
+  .badge.orange { background: #ffedd5; color: #c2410c; }
+
+  /* ── info grid (definition-list cards) ── */
+  .info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px 24px; background: white; padding: 20px 24px; border-radius: 12px;
+    box-shadow: var(--shadow); border: 1px solid var(--rule); margin: 14px 0;
+  }
+  .info-row { display: flex; flex-direction: column; gap: 4px; padding: 6px 0; border-bottom: 1px solid #f3f3f3; min-width: 0; }
+  .info-row:last-child { border-bottom: none; }
+  .info-row .info-label { font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; }
+  .info-row .info-value { font-size: 0.96em; color: var(--ink); font-weight: 500; overflow-wrap: break-word; }
+
+  /* ── card grid ── */
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin: 18px 0; }
+  .card { background: white; padding: 22px; border-radius: 14px; box-shadow: var(--shadow); border: 1px solid var(--rule); border-top: 4px solid var(--orange); min-width: 0; }
+  .card h4 { color: var(--orange); margin: 0 0 10px; font-size: 1.05em; font-weight: 700; }
+  .card p { color: #555; font-size: 0.92em; max-width: none; }
+
+  /* ── highlight box ── */
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(253,102,3,0.05) 0%, rgba(123,45,228,0.05) 100%);
+    border-left: 4px solid var(--orange); padding: 20px 24px; border-radius: 10px; margin: 18px 0;
+  }
+  .highlight-box h4 { color: var(--orange); margin: 0 0 8px; font-size: 1.05em; font-weight: 700; }
+
+  /* ── table ── */
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: white; box-shadow: var(--shadow); border-radius: 12px; overflow: hidden; }
+  thead { background: var(--grad); color: white; }
+  th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.85em; }
+  td { padding: 12px 16px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: #fafafa; }
+
+  /* ── pain / risk items (left-bar cards) ── */
+  .pain-list { display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
+  .pain-item { background: white; padding: 18px 20px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border-left: 4px solid #c2410c; min-width: 0; }
+  .pain-item h4 { color: var(--ink); margin: 0 0 6px; font-size: 1em; }
+  .pain-item .pain-meta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; font-size: 0.8em; color: var(--muted); }
+
+  /* ── before/after ── */
+  .ba-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 16px 0; }
+  .ba-col { background: white; padding: 20px; border-radius: 12px; box-shadow: var(--shadow); min-width: 0; }
+  .ba-col h4 { padding: 8px; border-radius: 8px; text-align: center; margin: 0 0 12px; font-size: 0.95em; }
+  .ba-col.before h4 { color: #b91c1c; background: #fef2f2; }
+  .ba-col.after h4  { color: #15803d; background: #f0fdf4; }
+  .ba-col ul { margin: 0 0 0 18px; padding: 0; }
+  .ba-col ul li { margin-bottom: 6px; font-size: 0.92em; }
+
+  /* ── timeline ── */
+  .meeting-list { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+  .meeting-item {
+    background: white; padding: 14px 18px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    border-left: 4px solid var(--purple); display: grid; grid-template-columns: 110px minmax(0,1fr); gap: 16px; align-items: start;
+  }
+  .meeting-item .meeting-date { font-weight: 700; color: var(--purple); font-size: 0.88em; }
+  .meeting-item .meeting-title { font-weight: 600; color: var(--ink); font-size: 0.95em; }
+
+  ul.plain { padding-left: 0; list-style: none; }
+  ul.plain li { padding-left: 20px; position: relative; }
+  ul.plain li + li { margin-top: 6px; }
+  ul.plain li::before { content: &quot;—&quot;; position: absolute; left: 0; color: var(--orange); font-weight: 700; }
+
+  footer.colophon {
+    margin: 56px 6vw 0; padding-top: 16px; border-top: 1px solid var(--rule);
+    display: grid; grid-template-columns: 1fr auto; gap: 16px; font-size: 0.76rem;
+    text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted);
+  }
+
+  /* ── responsive ── */
+  @media (max-width: 760px) {
+    header.masthead { grid-template-columns: 1fr; padding: 32px 5vw 28px; }
+    main { grid-template-columns: 1fr; padding: 0 5vw; gap: 28px; }
+    p, p.lede, blockquote { max-width: 100%; }
+    table { font-size: 0.85rem; display: block; overflow-x: auto; }
+    footer.colophon { grid-template-columns: 1fr; gap: 6px; }
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header class=&quot;masthead&quot;&gt;
+  &lt;div&gt;
+    &lt;h1&gt;The Quiet Architecture of Distinct Themes&lt;/h1&gt;
+    &lt;p class=&quot;subtitle&quot;&gt;A sample brief rendered in the dbt Brief theme&lt;/p&gt;
+    &lt;div class=&quot;meta&quot;&gt;
+      &lt;span&gt;Sample · Lavish theme library&lt;/span&gt;
+      &lt;span&gt;Tier 2 · hand-built&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;badge-chip&quot;&gt;
+    &lt;div class=&quot;chip-label&quot;&gt;Theme&lt;/div&gt;
+    &lt;div class=&quot;chip-value&quot;&gt;dbt Brief&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;p class=&quot;lede&quot;&gt;This page renders the same comparison content as the rest of the Lavish library, restyled into a SaaS-dashboard look: gradient masthead, card grid, pill badges, gradient table header. Use it for briefs that should feel like a polished internal product page rather than a printed document.&lt;/p&gt;
+
+    &lt;h2 class=&quot;section-title&quot;&gt;Three points of attention&lt;/h2&gt;
+    &lt;p&gt;Look at how the body type feels at long-form length. Whether the heading hierarchy reads at a glance. How &lt;code&gt;inline code&lt;/code&gt;, tables, and quotes sit inside cards.&lt;/p&gt;
+
+    &lt;div class=&quot;highlight-box&quot;&gt;
+      &lt;h4&gt;Why this theme exists&lt;/h4&gt;
+      &lt;p&gt;Captured from a rendered customer-briefing artifact: orange/purple gradient accents, rounded white cards on a soft gray paper, and pill-shaped status badges. Good for account health summaries, engagement recaps, and anything that benefits from at-a-glance status color.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;h2 class=&quot;section-title&quot;&gt;Status at a glance&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;span class=&quot;badge green&quot;&gt;On track&lt;/span&gt;
+      &lt;span class=&quot;badge yellow&quot;&gt;Watch&lt;/span&gt;
+      &lt;span class=&quot;badge red&quot;&gt;At risk&lt;/span&gt;
+      &lt;span class=&quot;badge blue&quot;&gt;Informational&lt;/span&gt;
+      &lt;span class=&quot;badge purple&quot;&gt;Strategic&lt;/span&gt;
+      &lt;span class=&quot;badge orange&quot;&gt;Action needed&lt;/span&gt;
+    &lt;/p&gt;
+
+    &lt;h3 class=&quot;subsection-title&quot;&gt;Quick facts&lt;/h3&gt;
+    &lt;div class=&quot;info-grid&quot;&gt;
+      &lt;div class=&quot;info-row&quot;&gt;&lt;span class=&quot;info-label&quot;&gt;Theme&lt;/span&gt;&lt;span class=&quot;info-value&quot;&gt;dbt Brief&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;info-row&quot;&gt;&lt;span class=&quot;info-label&quot;&gt;Tier&lt;/span&gt;&lt;span class=&quot;info-value&quot;&gt;2 — hand-built&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;info-row&quot;&gt;&lt;span class=&quot;info-label&quot;&gt;Accent&lt;/span&gt;&lt;span class=&quot;info-value&quot;&gt;Orange / purple gradient&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;info-row&quot;&gt;&lt;span class=&quot;info-label&quot;&gt;Best for&lt;/span&gt;&lt;span class=&quot;info-value&quot;&gt;Account briefs, status dashboards&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;h2 class=&quot;section-title&quot;&gt;The library&lt;/h2&gt;
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Theme&lt;/th&gt;&lt;th&gt;Aesthetic&lt;/th&gt;&lt;th&gt;Best for&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;Latex&lt;/td&gt;&lt;td&gt;Academic paper&lt;/td&gt;&lt;td&gt;Long essays&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Terminal&lt;/td&gt;&lt;td&gt;Monospace stationery&lt;/td&gt;&lt;td&gt;Postmortems, runbooks&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Water&lt;/td&gt;&lt;td&gt;Neutral, auto dark/light&lt;/td&gt;&lt;td&gt;General briefs&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Swiss&lt;/td&gt;&lt;td&gt;International typographic&lt;/td&gt;&lt;td&gt;Decisive briefs&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;dbt Brief&lt;/td&gt;&lt;td&gt;Gradient SaaS dashboard&lt;/td&gt;&lt;td&gt;Account / status briefs&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;h2 class=&quot;section-title&quot;&gt;Cards&lt;/h2&gt;
+    &lt;div class=&quot;card-grid&quot;&gt;
+      &lt;div class=&quot;card&quot;&gt;&lt;h4&gt;Card one&lt;/h4&gt;&lt;p&gt;Cards carry a top accent stripe and a soft shadow — the same unit used for pillar/blueprint recommendations and engagement highlights.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class=&quot;card&quot;&gt;&lt;h4&gt;Card two&lt;/h4&gt;&lt;p&gt;Grid is responsive via &lt;code&gt;auto-fit, minmax()&lt;/code&gt; so it degrades to a single column on narrow viewports.&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;h2 class=&quot;section-title&quot;&gt;Before / after&lt;/h2&gt;
+    &lt;div class=&quot;ba-grid&quot;&gt;
+      &lt;div class=&quot;ba-col before&quot;&gt;&lt;h4&gt;Before&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;State the pain plainly.&lt;/li&gt;&lt;li&gt;One line per point.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+      &lt;div class=&quot;ba-col after&quot;&gt;&lt;h4&gt;After&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;State the outcome plainly.&lt;/li&gt;&lt;li&gt;Mirror the before list 1:1.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;h2 class=&quot;section-title&quot;&gt;Timeline&lt;/h2&gt;
+    &lt;div class=&quot;meeting-list&quot;&gt;
+      &lt;div class=&quot;meeting-item&quot;&gt;&lt;div class=&quot;meeting-date&quot;&gt;2026-06-01&lt;/div&gt;&lt;div class=&quot;meeting-title&quot;&gt;Example timeline entry — purple left bar marks chronological items.&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;h2 class=&quot;section-title&quot;&gt;Notes&lt;/h2&gt;
+    &lt;ul class=&quot;plain&quot;&gt;
+      &lt;li&gt;Tier 2 themes load Google Fonts via CDN — fine when online.&lt;/li&gt;
+      &lt;li&gt;This theme is JS-free like the rest of the library; the original briefing&#x27;s tab-switching JS was dropped in favor of one scrollable page.&lt;/li&gt;
+      &lt;li&gt;Keep section markup (&lt;code&gt;.section-title&lt;/code&gt;, &lt;code&gt;.card&lt;/code&gt;, &lt;code&gt;.badge&lt;/code&gt;, etc.) when swapping in real content.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/article&gt;
+
+  &lt;aside&gt;
+    &lt;div class=&quot;aside-box&quot;&gt;
+      &lt;h3&gt;About this template&lt;/h3&gt;
+      &lt;p&gt;Captured from a dbt Labs RA customer-briefing artifact. Orange (#fd6603) → purple (#7b2de4) gradient, Inter, rounded white cards on near-white paper, pill badges for status.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;aside-box&quot;&gt;
+      &lt;h3&gt;In one line&lt;/h3&gt;
+      &lt;p&gt;Polished internal dashboard, not a printed page.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer class=&quot;colophon&quot;&gt;
+  &lt;div&gt;Lavish theme library · tier 2&lt;/div&gt;
+  &lt;div&gt;dbt Brief&lt;/div&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" loading="lazy" title="dbt-brief sample"></iframe>
+  </section>
+  <section class="sample" id="dbt-brief-dashboard">
+    <header class="label">
+      <div>
+        <div class="name">dbt-brief-dashboard</div>
+        <div class="blurb">dbt-brief, split into CSS-only tabs (nested radio+label+:has(), no JS). Reference implementation for multi-section dashboards.</div>
+      </div>
+      <div class="actions">
+        <a href="tier2/dbt-brief-dashboard.html" target="_blank" rel="noopener">open standalone ↗</a>
+      </div>
+    </header>
+    <iframe srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;meta name=&quot;lavish-design&quot; content=&quot;off&quot;&gt;
+&lt;title&gt;dbt Brief — dashboard sample&lt;/title&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;!--
+  dbt-brief theme, &quot;dashboard&quot; layout mode: the same look as dbt-brief.html,
+  restructured into a CSS-only tabbed nav (radio + label + :has(), no
+  JavaScript). Two things this pattern gets right on purpose - copy them
+  exactly when adapting this file, not the naive version:
+
+  1. Each radio lives INSIDE its own label (`&lt;label&gt;&lt;input&gt;...&lt;span&gt;text
+     &lt;/span&gt;&lt;/label&gt;`), sized to cover the whole label via
+     `position: absolute; inset: 0; opacity: 0;`. Do NOT hide bare radio
+     inputs as page-level siblings of nav/main with `opacity:0;
+     position:absolute` and no size tied to a label - their hit area then
+     stops matching the visible tab text, which breaks both real clicks and
+     automated (accessibility-node) clicks.
+  2. Because the radio is nested inside its label, the classic forward `~`
+     general-sibling selector can&#x27;t reach the panels. This uses
+     `body:has(#tab-x:checked) #panel-x { display: block; }` instead
+     (supported in current Chromium) - one rule per panel, each panel
+     defaulting to `display: none`.
+
+  Also: close every CSS comment with `*/`, never `--&gt;`. A stray `--&gt;` does
+  not error - it silently makes the parser treat everything up to the next
+  real `*/` anywhere later in the file as one comment, which can delete an
+  entire feature&#x27;s CSS with zero visible symptoms.
+--&gt;
+&lt;style&gt;
+  :root {
+    --orange: #fd6603;
+    --purple: #7b2de4;
+    --grad: linear-gradient(135deg, var(--orange) 0%, var(--purple) 100%);
+    --paper: #f8f9fa;
+    --ink:   #2c3e50;
+    --muted: #6b7280;
+    --rule:  #f0f0f0;
+    --shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink);
+    font-family: &quot;Inter&quot;, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  body { padding: 0 0 60px; }
+
+  header.masthead {
+    background: var(--grad); color: white; padding: 40px 6vw 32px;
+    display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 24px; align-items: start;
+  }
+  header.masthead h1 {
+    font-weight: 800; font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+    line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 8px; text-wrap: balance;
+  }
+  header.masthead .subtitle { font-size: 1.05em; opacity: 0.95; font-weight: 400; margin: 0; max-width: 62ch; }
+  .badge-chip {
+    background: rgba(255,255,255,0.16); backdrop-filter: blur(8px);
+    padding: 10px 16px; border-radius: 10px; text-align: right; font-size: 0.85em; min-width: 150px;
+  }
+  .badge-chip .chip-label { opacity: 0.78; font-size: 0.82em; }
+  .badge-chip .chip-value { font-weight: 700; font-size: 1.05em; }
+
+  /* ── CSS-only tabs. See the top-of-file comment before adapting. ── */
+  nav.tab-nav {
+    background: white; box-shadow: 0 2px 15px rgba(0,0,0,0.06); border-bottom: 1px solid var(--rule);
+    position: sticky; top: 0; z-index: 10;
+  }
+  nav.tab-nav .tab-nav-inner { display: flex; flex-wrap: wrap; padding: 0 5vw; }
+  label.tab-item {
+    position: relative; display: flex; align-items: center; gap: 7px; padding: 15px 16px;
+    color: #555; font-weight: 600; font-size: 0.85em; cursor: pointer;
+    border-bottom: 3px solid transparent; white-space: nowrap; user-select: none;
+  }
+  label.tab-item:hover { color: var(--orange); background: #fff7f0; }
+  label.tab-item input.tab-radio {
+    position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; appearance: none;
+  }
+
+  main.tab-panels { padding: 32px 5vw 0; }
+  .tab-panel { display: none; }
+
+  body:has(#tab-overview:checked) label[data-tab=&quot;overview&quot;],
+  body:has(#tab-library:checked) label[data-tab=&quot;library&quot;],
+  body:has(#tab-compare:checked) label[data-tab=&quot;compare&quot;],
+  body:has(#tab-notes:checked) label[data-tab=&quot;notes&quot;] {
+    color: var(--orange); border-bottom-color: var(--orange); background: #fff7f0;
+  }
+  body:has(#tab-overview:checked) #panel-overview,
+  body:has(#tab-library:checked) #panel-library,
+  body:has(#tab-compare:checked) #panel-compare,
+  body:has(#tab-notes:checked) #panel-notes {
+    display: block;
+  }
+
+  h2.section-title {
+    font-size: 1.55em; color: var(--ink); margin: 0 0 4px 0; font-weight: 700;
+    padding-bottom: 10px; border-bottom: 3px solid var(--orange);
+  }
+  p { margin: 0 0 0.8em; max-width: 80ch; }
+  p.lede { font-size: 1.12rem; line-height: 1.5; font-weight: 500; color: var(--ink); }
+  p.lede::first-letter { color: var(--orange); font-weight: 800; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; padding: 1px 6px; background: #f0f0f0; border: 1px solid #e5e5e5; border-radius: 4px; }
+  blockquote { margin: 0.6em 0; padding: 16px 0 16px 22px; border-left: 4px solid var(--purple); font-weight: 500; font-size: 1.15rem; line-height: 1.35; color: var(--ink); }
+
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(253,102,3,0.05) 0%, rgba(123,45,228,0.05) 100%);
+    border-left: 4px solid var(--orange); padding: 18px 22px; border-radius: 10px; margin: 14px 0;
+  }
+  .highlight-box h4 { color: var(--orange); margin: 0 0 8px; font-size: 1em; font-weight: 700; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: white; box-shadow: var(--shadow); border-radius: 12px; overflow: hidden; margin: 8px 0; }
+  thead { background: var(--grad); color: white; }
+  th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.85em; }
+  td { padding: 12px 16px; border-bottom: 1px solid var(--rule); }
+  tr:last-child td { border-bottom: none; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 14px 0; }
+  .card { background: white; padding: 20px; border-radius: 14px; box-shadow: var(--shadow); border: 1px solid var(--rule); border-top: 4px solid var(--orange); min-width: 0; }
+  .card h4 { color: var(--orange); margin: 0 0 8px; font-size: 1em; }
+  .card p { color: #444; font-size: 0.92em; max-width: none; }
+
+  .ba-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 14px 0; }
+  .ba-col { background: white; padding: 18px; border-radius: 12px; box-shadow: var(--shadow); min-width: 0; }
+  .ba-col h4 { padding: 8px; border-radius: 8px; text-align: center; margin: 0 0 12px; font-size: 0.92em; }
+  .ba-col.before h4 { color: #b91c1c; background: #fef2f2; }
+  .ba-col.after h4  { color: #15803d; background: #f0fdf4; }
+  .ba-col ul { margin: 0; padding: 0 0 0 18px; }
+
+  ul.plain { padding-left: 0; list-style: none; margin: 0.6em 0; }
+  ul.plain li { padding-left: 20px; position: relative; margin-bottom: 6px; }
+  ul.plain li::before { content: &quot;—&quot;; position: absolute; left: 0; color: var(--orange); font-weight: 700; }
+
+  footer.colophon {
+    margin: 40px 5vw 0; padding-top: 16px; border-top: 1px solid var(--rule);
+    display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; font-size: 0.74rem; color: var(--muted);
+  }
+
+  @media (max-width: 760px) {
+    header.masthead { grid-template-columns: 1fr; padding: 32px 5vw 24px; }
+    main.tab-panels { padding: 24px 5vw 0; }
+    table { font-size: 0.85rem; display: block; overflow-x: auto; }
+    footer.colophon { grid-template-columns: 1fr; gap: 6px; }
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header class=&quot;masthead&quot;&gt;
+  &lt;div&gt;
+    &lt;h1&gt;The Quiet Architecture of Distinct Themes&lt;/h1&gt;
+    &lt;p class=&quot;subtitle&quot;&gt;dbt Brief, dashboard layout mode — the same theme as dbt-brief.html, split into tabs instead of one scroll.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;badge-chip&quot;&gt;&lt;div class=&quot;chip-label&quot;&gt;Theme&lt;/div&gt;&lt;div class=&quot;chip-value&quot;&gt;dbt Brief · Dashboard&lt;/div&gt;&lt;/div&gt;
+&lt;/header&gt;
+
+&lt;nav class=&quot;tab-nav&quot;&gt;
+  &lt;div class=&quot;tab-nav-inner&quot;&gt;
+    &lt;label class=&quot;tab-item&quot; data-tab=&quot;overview&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;tabs&quot; id=&quot;tab-overview&quot; class=&quot;tab-radio&quot; checked&gt;&lt;span&gt;Overview&lt;/span&gt;&lt;/label&gt;
+    &lt;label class=&quot;tab-item&quot; data-tab=&quot;library&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;tabs&quot; id=&quot;tab-library&quot; class=&quot;tab-radio&quot;&gt;&lt;span&gt;The Library&lt;/span&gt;&lt;/label&gt;
+    &lt;label class=&quot;tab-item&quot; data-tab=&quot;compare&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;tabs&quot; id=&quot;tab-compare&quot; class=&quot;tab-radio&quot;&gt;&lt;span&gt;Cards &amp;amp; Comparison&lt;/span&gt;&lt;/label&gt;
+    &lt;label class=&quot;tab-item&quot; data-tab=&quot;notes&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;tabs&quot; id=&quot;tab-notes&quot; class=&quot;tab-radio&quot;&gt;&lt;span&gt;Notes&lt;/span&gt;&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;main class=&quot;tab-panels&quot;&gt;
+
+  &lt;section class=&quot;tab-panel&quot; id=&quot;panel-overview&quot;&gt;
+    &lt;h2 class=&quot;section-title&quot;&gt;Overview&lt;/h2&gt;
+    &lt;p class=&quot;lede&quot;&gt;This page renders the same comparison content as the rest of the Lavish library, split across tabs instead of one long scroll. Use dashboard mode for briefs with several genuinely distinct sections the user will jump between rather than read start to finish.&lt;/p&gt;
+    &lt;div class=&quot;highlight-box&quot;&gt;
+      &lt;h4&gt;Why this theme exists&lt;/h4&gt;
+      &lt;p&gt;Captured from a rendered customer-briefing artifact: orange/purple gradient accents, rounded white cards on a soft gray paper, pill-shaped status badges, and - in this variant - CSS-only tabs. Good for account health dashboards, engagement recaps, and anything that benefits from at-a-glance status color plus section navigation.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;blockquote&gt;Design is the rendering of intent. Or, less grandly: the choices you make until the page stops fighting you.&lt;/blockquote&gt;
+  &lt;/section&gt;
+
+  &lt;section class=&quot;tab-panel&quot; id=&quot;panel-library&quot;&gt;
+    &lt;h2 class=&quot;section-title&quot;&gt;The Library&lt;/h2&gt;
+    &lt;p&gt;Look at how a table reads inside this theme&#x27;s gradient header treatment.&lt;/p&gt;
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Theme&lt;/th&gt;&lt;th&gt;Aesthetic&lt;/th&gt;&lt;th&gt;Best for&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;Latex&lt;/td&gt;&lt;td&gt;Academic paper&lt;/td&gt;&lt;td&gt;Long essays&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Terminal&lt;/td&gt;&lt;td&gt;Monospace stationery&lt;/td&gt;&lt;td&gt;Postmortems, runbooks&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Water&lt;/td&gt;&lt;td&gt;Neutral, auto dark/light&lt;/td&gt;&lt;td&gt;General briefs&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Swiss&lt;/td&gt;&lt;td&gt;International typographic&lt;/td&gt;&lt;td&gt;Decisive briefs&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;dbt Brief&lt;/td&gt;&lt;td&gt;Gradient SaaS dashboard&lt;/td&gt;&lt;td&gt;Account / status briefs&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;ul class=&quot;plain&quot;&gt;
+      &lt;li&gt;Tier 2 themes load Google Fonts via CDN — fine when online.&lt;/li&gt;
+      &lt;li&gt;This dashboard variant is still JS-free; only CSS drives the tab switching.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+
+  &lt;section class=&quot;tab-panel&quot; id=&quot;panel-compare&quot;&gt;
+    &lt;h2 class=&quot;section-title&quot;&gt;Cards &amp;amp; Comparison&lt;/h2&gt;
+    &lt;div class=&quot;card-grid&quot;&gt;
+      &lt;div class=&quot;card&quot;&gt;&lt;h4&gt;Card one&lt;/h4&gt;&lt;p&gt;Cards carry a top accent stripe and a soft shadow — the unit used for pillar/blueprint recommendations and engagement highlights.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class=&quot;card&quot;&gt;&lt;h4&gt;Card two&lt;/h4&gt;&lt;p&gt;Grid is responsive via &lt;code&gt;auto-fit, minmax()&lt;/code&gt; so it degrades to a single column on narrow viewports.&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ba-grid&quot;&gt;
+      &lt;div class=&quot;ba-col before&quot;&gt;&lt;h4&gt;Before&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;State the pain plainly.&lt;/li&gt;&lt;li&gt;One line per point.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+      &lt;div class=&quot;ba-col after&quot;&gt;&lt;h4&gt;After&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;State the outcome plainly.&lt;/li&gt;&lt;li&gt;Mirror the before list 1:1.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class=&quot;tab-panel&quot; id=&quot;panel-notes&quot;&gt;
+    &lt;h2 class=&quot;section-title&quot;&gt;Notes&lt;/h2&gt;
+    &lt;ul class=&quot;plain&quot;&gt;
+      &lt;li&gt;Nest each tab&#x27;s radio inside its own label; size the input to cover the label with &lt;code&gt;position: absolute; inset: 0; opacity: 0;&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Use &lt;code&gt;body:has(#tab-x:checked) #panel-x&lt;/code&gt; to show panels — not a forward &lt;code&gt;~&lt;/code&gt; sibling selector, which can&#x27;t reach past the label boundary.&lt;/li&gt;
+      &lt;li&gt;Close every CSS comment with &lt;code&gt;*/&lt;/code&gt;. A stray &lt;code&gt;--&amp;gt;&lt;/code&gt; silently comments out everything until the next real &lt;code&gt;*/&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Re-verify inside an actual Lavish session, not just the raw file — the artifact iframe is sandboxed (no &lt;code&gt;allow-same-origin&lt;/code&gt;), so page-level script cannot reach in, but real and automated clicks against the page tree still work correctly.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+
+&lt;/main&gt;
+
+&lt;footer class=&quot;colophon&quot;&gt;
+  &lt;div&gt;Lavish theme library · tier 2 · dashboard variant&lt;/div&gt;
+  &lt;div&gt;dbt Brief · Dashboard&lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+" loading="lazy" title="dbt-brief-dashboard sample"></iframe>
   </section>
 </main>
 
