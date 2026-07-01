@@ -146,6 +146,15 @@
     table { font-size: 0.85rem; display: block; overflow-x: auto; }
     footer.colophon { grid-template-columns: 1fr; gap: 6px; }
   }
+
+  /* Printing only the checked tab would silently drop the other panels -
+     every CSS-only-tabs artifact must override .tab-panel's display:none
+     here so print/Save-as-PDF shows every tab, not just whichever was open. */
+  @media print {
+    nav.tab-nav { display: none; }
+    .tab-panel { display: block !important; page-break-after: always; }
+    .tab-panel:last-of-type { page-break-after: auto; }
+  }
 </style>
 </head>
 <body>
