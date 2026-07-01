@@ -116,11 +116,27 @@
     --rule:  #d6d6d0;
     --muted: #6b6b66;
   }
+  :root[data-lavish-content-theme="dark"] {
+    --paper: #16171b;
+    --ink:   #ececea;
+    --red:   #e30613;
+    --rule:  #35363c;
+    --muted: #9b9a95;
+  }
+  /* code uses a hardcoded light background elsewhere in this file, which
+     would put light --ink text on a light background under the dark theme.
+     pre is fully variable-driven (background: var(--ink)) so it inverts
+     correctly on its own and needs no override here. */
+  [data-lavish-content-theme="dark"] code {
+    background: #1e1f24;
+    border-color: #35363c;
+  }
 </style>
 <script type="application/json" id="lavish-content-themes">
 [
   {"id": "lavish-light", "label": "Lavish Light"},
-  {"id": "swiss", "label": "Swiss"}
+  {"id": "swiss", "label": "Swiss"},
+  {"id": "dark", "label": "Dark"}
 ]
 </script>
 </head>
