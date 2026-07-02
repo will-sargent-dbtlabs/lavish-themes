@@ -18,6 +18,15 @@
     --tape: #f7e9a0;
     --note: #fff79a;
   }
+  :root[data-lavish-content-theme="dark"] {
+    --paper: #1e1c18;
+    --ruling: #3a4a54;
+    --margin: #d94f4f;
+    --ink: #ece6d8;
+    --pencil: #a9a49b;
+    --tape: #4a4128;
+    --note: #5c4f1e;
+  }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
   body {
@@ -101,6 +110,12 @@
     h1 { font-size: 30px; line-height: 40px; }
   }
 </style>
+<script type="application/json" id="lavish-content-themes">
+[
+  {"id": "light", "label": "Light"},
+  {"id": "dark", "label": "Dark"}
+]
+</script>
 </head>
 <body>
 <h1>The Quiet Architecture of Distinct Themes</h1>
