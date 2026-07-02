@@ -18,6 +18,18 @@
     --muted: #6b7280;
     --rule:  #f0f0f0;
     --shadow: 0 4px 20px rgba(0,0,0,0.06);
+    --card: #fff;
+    --code-bg: #f0f0f0;
+    --pre-bg: #f5f5f5;
+  }
+  :root[data-lavish-content-theme="dark"] {
+    --paper: #14171c;
+    --ink:   #e8ebef;
+    --muted: #9aa3af;
+    --rule:  #2a2f38;
+    --card: #1c2027;
+    --code-bg: #262b33;
+    --pre-bg: #21252c;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink);
@@ -50,7 +62,7 @@
   article > * + * { margin-top: 1.2em; }
   aside { font-size: 0.92rem; color: var(--muted); }
   aside .aside-box {
-    background: white; border-radius: 12px; box-shadow: var(--shadow);
+    background: var(--card); border-radius: 12px; box-shadow: var(--shadow);
     border: 1px solid var(--rule); border-left: 4px solid var(--orange);
     padding: 18px 20px; margin-bottom: 16px;
   }
@@ -70,8 +82,8 @@
   p.lede { font-size: 1.18rem; line-height: 1.45; font-weight: 500; max-width: 60ch; color: var(--ink); }
   strong { font-weight: 700; }
   em { font-style: italic; }
-  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; padding: 1px 6px; background: #f0f0f0; border: 1px solid #e5e5e5; border-radius: 4px; }
-  pre { background: #f5f5f5; color: var(--ink); border: 1px solid #e5e5e5; padding: 16px 18px; border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88rem; line-height: 1.5; overflow-x: auto; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; padding: 1px 6px; background: var(--code-bg); border: 1px solid #e5e5e5; border-radius: 4px; }
+  pre { background: var(--pre-bg); color: var(--ink); border: 1px solid #e5e5e5; padding: 16px 18px; border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88rem; line-height: 1.5; overflow-x: auto; }
   pre code { background: transparent; border: 0; padding: 0; }
   blockquote {
     margin: 0; padding: 16px 0 16px 22px; border-left: 4px solid var(--purple);
@@ -91,7 +103,7 @@
   /* ── info grid (definition-list cards) ── */
   .info-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px 24px; background: white; padding: 20px 24px; border-radius: 12px;
+    gap: 12px 24px; background: var(--card); padding: 20px 24px; border-radius: 12px;
     box-shadow: var(--shadow); border: 1px solid var(--rule); margin: 14px 0;
   }
   .info-row { display: flex; flex-direction: column; gap: 4px; padding: 6px 0; border-bottom: 1px solid #f3f3f3; min-width: 0; }
@@ -101,7 +113,7 @@
 
   /* ── card grid ── */
   .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin: 18px 0; }
-  .card { background: white; padding: 22px; border-radius: 14px; box-shadow: var(--shadow); border: 1px solid var(--rule); border-top: 4px solid var(--orange); min-width: 0; }
+  .card { background: var(--card); padding: 22px; border-radius: 14px; box-shadow: var(--shadow); border: 1px solid var(--rule); border-top: 4px solid var(--orange); min-width: 0; }
   .card h4 { color: var(--orange); margin: 0 0 10px; font-size: 1.05em; font-weight: 700; }
   .card p { color: #555; font-size: 0.92em; max-width: none; }
 
@@ -113,7 +125,7 @@
   .highlight-box h4 { color: var(--orange); margin: 0 0 8px; font-size: 1.05em; font-weight: 700; }
 
   /* ── table ── */
-  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: white; box-shadow: var(--shadow); border-radius: 12px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: var(--card); box-shadow: var(--shadow); border-radius: 12px; overflow: hidden; }
   thead { background: var(--grad); color: white; }
   th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.85em; }
   td { padding: 12px 16px; border-bottom: 1px solid var(--rule); vertical-align: top; }
@@ -122,13 +134,13 @@
 
   /* ── pain / risk items (left-bar cards) ── */
   .pain-list { display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
-  .pain-item { background: white; padding: 18px 20px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border-left: 4px solid #c2410c; min-width: 0; }
+  .pain-item { background: var(--card); padding: 18px 20px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border-left: 4px solid #c2410c; min-width: 0; }
   .pain-item h4 { color: var(--ink); margin: 0 0 6px; font-size: 1em; }
   .pain-item .pain-meta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; font-size: 0.8em; color: var(--muted); }
 
   /* ── before/after ── */
   .ba-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 16px 0; }
-  .ba-col { background: white; padding: 20px; border-radius: 12px; box-shadow: var(--shadow); min-width: 0; }
+  .ba-col { background: var(--card); padding: 20px; border-radius: 12px; box-shadow: var(--shadow); min-width: 0; }
   .ba-col h4 { padding: 8px; border-radius: 8px; text-align: center; margin: 0 0 12px; font-size: 0.95em; }
   .ba-col.before h4 { color: #b91c1c; background: #fef2f2; }
   .ba-col.after h4  { color: #15803d; background: #f0fdf4; }
@@ -138,7 +150,7 @@
   /* ── timeline ── */
   .meeting-list { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
   .meeting-item {
-    background: white; padding: 14px 18px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    background: var(--card); padding: 14px 18px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.04);
     border-left: 4px solid var(--purple); display: grid; grid-template-columns: 110px minmax(0,1fr); gap: 16px; align-items: start;
   }
   .meeting-item .meeting-date { font-weight: 700; color: var(--purple); font-size: 0.88em; }
@@ -164,6 +176,12 @@
     footer.colophon { grid-template-columns: 1fr; gap: 6px; }
   }
 </style>
+<script type="application/json" id="lavish-content-themes">
+[
+  {"id": "light", "label": "Light"},
+  {"id": "dark", "label": "Dark"}
+]
+</script>
 </head>
 <body>
 <header class="masthead">

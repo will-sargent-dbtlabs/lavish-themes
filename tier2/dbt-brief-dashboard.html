@@ -42,6 +42,16 @@
     --muted: #6b7280;
     --rule:  #f0f0f0;
     --shadow: 0 4px 20px rgba(0,0,0,0.06);
+    --card: #fff;
+    --code-bg: #f0f0f0;
+  }
+  :root[data-lavish-content-theme="dark"] {
+    --paper: #14171c;
+    --ink:   #e8ebef;
+    --muted: #9aa3af;
+    --rule:  #2a2f38;
+    --card: #1c2027;
+    --code-bg: #262b33;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink);
@@ -67,7 +77,7 @@
 
   /* ── CSS-only tabs. See the top-of-file comment before adapting. ── */
   nav.tab-nav {
-    background: white; box-shadow: 0 2px 15px rgba(0,0,0,0.06); border-bottom: 1px solid var(--rule);
+    background: var(--card); box-shadow: 0 2px 15px rgba(0,0,0,0.06); border-bottom: 1px solid var(--rule);
     position: sticky; top: 0; z-index: 10;
   }
   nav.tab-nav .tab-nav-inner { display: flex; flex-wrap: wrap; padding: 0 5vw; }
@@ -104,7 +114,7 @@
   p { margin: 0 0 0.8em; max-width: 80ch; }
   p.lede { font-size: 1.12rem; line-height: 1.5; font-weight: 500; color: var(--ink); }
   p.lede::first-letter { color: var(--orange); font-weight: 800; }
-  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; padding: 1px 6px; background: #f0f0f0; border: 1px solid #e5e5e5; border-radius: 4px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; padding: 1px 6px; background: var(--code-bg); border: 1px solid #e5e5e5; border-radius: 4px; }
   blockquote { margin: 0.6em 0; padding: 16px 0 16px 22px; border-left: 4px solid var(--purple); font-weight: 500; font-size: 1.15rem; line-height: 1.35; color: var(--ink); }
 
   .highlight-box {
@@ -113,19 +123,19 @@
   }
   .highlight-box h4 { color: var(--orange); margin: 0 0 8px; font-size: 1em; font-weight: 700; }
 
-  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: white; box-shadow: var(--shadow); border-radius: 12px; overflow: hidden; margin: 8px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: var(--card); box-shadow: var(--shadow); border-radius: 12px; overflow: hidden; margin: 8px 0; }
   thead { background: var(--grad); color: white; }
   th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.85em; }
   td { padding: 12px 16px; border-bottom: 1px solid var(--rule); }
   tr:last-child td { border-bottom: none; }
 
   .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 14px 0; }
-  .card { background: white; padding: 20px; border-radius: 14px; box-shadow: var(--shadow); border: 1px solid var(--rule); border-top: 4px solid var(--orange); min-width: 0; }
+  .card { background: var(--card); padding: 20px; border-radius: 14px; box-shadow: var(--shadow); border: 1px solid var(--rule); border-top: 4px solid var(--orange); min-width: 0; }
   .card h4 { color: var(--orange); margin: 0 0 8px; font-size: 1em; }
   .card p { color: #444; font-size: 0.92em; max-width: none; }
 
   .ba-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 14px 0; }
-  .ba-col { background: white; padding: 18px; border-radius: 12px; box-shadow: var(--shadow); min-width: 0; }
+  .ba-col { background: var(--card); padding: 18px; border-radius: 12px; box-shadow: var(--shadow); min-width: 0; }
   .ba-col h4 { padding: 8px; border-radius: 8px; text-align: center; margin: 0 0 12px; font-size: 0.92em; }
   .ba-col.before h4 { color: #b91c1c; background: #fef2f2; }
   .ba-col.after h4  { color: #15803d; background: #f0fdf4; }
@@ -156,6 +166,12 @@
     .tab-panel:last-of-type { page-break-after: auto; }
   }
 </style>
+<script type="application/json" id="lavish-content-themes">
+[
+  {"id": "light", "label": "Light"},
+  {"id": "dark", "label": "Dark"}
+]
+</script>
 </head>
 <body>
 
