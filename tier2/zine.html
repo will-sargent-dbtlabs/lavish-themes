@@ -16,6 +16,23 @@
     --paper: #f3f0e8;
     --cyan: #00d9ff;
   }
+  :root[data-lavish-content-theme="dark"] {
+    --yellow: #0b0b0b;
+    --black: #ffd400;
+    --paper: #1c1c1c;
+  }
+  /* code/pre use cyan text on var(--black), which is bright yellow once
+     swapped above - keep their background literally dark so cyan stays
+     legible instead of becoming cyan-on-yellow. pre also has a
+     border: 4px solid var(--black) that matches its own background in
+     light mode (an intentionally invisible border) - pin border-color to
+     the same literal dark value too, or it would render as a visible
+     bright-yellow outline that never existed in the original design. */
+  [data-lavish-content-theme="dark"] code,
+  [data-lavish-content-theme="dark"] pre {
+    background: #0b0b0b;
+    border-color: #0b0b0b;
+  }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; background: var(--yellow); color: var(--black); }
   body {
@@ -107,6 +124,12 @@
     }
   }
 </style>
+<script type="application/json" id="lavish-content-themes">
+[
+  {"id": "light", "label": "Light"},
+  {"id": "dark", "label": "Dark"}
+]
+</script>
 </head>
 <body>
 
